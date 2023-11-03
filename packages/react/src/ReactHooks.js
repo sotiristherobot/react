@@ -96,6 +96,7 @@ export function useContext<T>(Context: ReactContext<T>): T {
 export function useState<S>(
   initialState: (() => S) | S,
 ): [S, Dispatch<BasicStateAction<S>>] {
+  console.log('test useState');
   const dispatcher = resolveDispatcher();
   return dispatcher.useState(initialState);
 }
